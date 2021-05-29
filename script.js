@@ -51,3 +51,36 @@ $x('//./././div/div[9]/span[1]/text()').reduce(x => x.textContent)
 // 10
 $x('//././/././div[10]/span[1]/text()').map(x => x.data)
 $x('//././/.//div[10]/span[1]/text()').map(x => x.data)
+
+
+
+
+// eje en sistaxis
+
+$x('//autor[@fechaNacimiento]').map(x => x.outerText)
+// result by console --> (4) ["Mario Vargas Llosa", "Mario Vargas Llosa", "Mario Vargas Llosa", "Mario Vargas Llosa"]
+
+
+$x('/html/body/biblioteca/autor[2]').map(x =>x.outerHTML)
+
+
+
+
+$x('/html/body/biblioteca/div/autor[2][@fechaNacimiento]').reduce(x => x.innerHTML)
+
+parentNode.innerHTML
+
+
+$x('/html/body/biblioteca/libro[1]/text()').map(x =>x.parentNode.innerHTML)
+
+
+$x('/html/body/biblioteca/libro[autor="Mario Vargas Llosa"]').reduce(x =>x.innerHTML)
+
+
+x('/html/body/biblioteca/libro[1]/fechapublicacion').reduce(x =>x.parentNode.innerHTML)
+
+$x('//././libro[last()]').reduce(x =>x.innerHTML)
+
+$x('//./biblioteca/libro[1]/fechapublicacion/@año[.>1970]').reduce(x =>x.innerHTML)
+
+$x('/html/body/biblioteca/libro[1]/fechapublicacion').reduce(x =>x.innerHTML)
