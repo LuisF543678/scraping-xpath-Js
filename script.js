@@ -84,3 +84,28 @@ $x('//././libro[last()]').reduce(x =>x.innerHTML)
 $x('//./biblioteca/libro[1]/fechapublicacion/@año[.>1970]').reduce(x =>x.innerHTML)
 
 $x('/html/body/biblioteca/libro[1]/fechapublicacion').reduce(x =>x.innerHTML)
+
+// 1
+$x('//*[@id="default"]/div[1]/div/div/div/section/div[2]/ol/li/article/h3/a').map(x =>x.innerText)
+
+// 1 -2 
+$x('//*[@id="default"]//././/.//.//h3/a').map(x =>x.innerText)
+
+// 2
+$x('//*[@id="default"]/div[1]/div/div/div/section/div[2]/ol/li/article/div[2]/p[1]').map(x =>x.innerText)
+
+
+// 2 - 2
+$x('//*[@id="default"]//.//././/././article/div[2]/p[1]').map(x =>x.innerText) 
+
+// 3 
+$x('//*[@id="default"]/div[1]/div/div/aside//ul/li/a/text()').map(x =>x.innerText)
+
+// 3 -3 
+$x('//*[@id="default"]//.//aside//ul/li/a/text()').map(x =>x.innerText)
+
+
+
+// name books 
+
+$x('//*[@id="default"]/div/div/div/div/section/div/ol/li/article/h3/a').map(x =>x.lastChild.data)
