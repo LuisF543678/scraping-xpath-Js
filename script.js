@@ -109,3 +109,12 @@ $x('//*[@id="default"]//.//aside//ul/li/a/text()').map(x =>x.innerText)
 // name books 
 
 $x('//*[@id="default"]/div/div/div/div/section/div/ol/li/article/h3/a').map(x =>x.lastChild.data)
+
+// cost books
+
+$x('//*[@id="default"]/div[1]/div/div/div/section/div[2]/ol/li/article/div/p').map(x =>x.lastChild.data)
+
+
+// Description book
+
+$x('//*[@id="content_inner"]/article/p/text()').reduce(x =>x.wholeText)
